@@ -9,6 +9,7 @@ import Button from './Button';
 import CenterView from './CenterView';
 import Welcome from './Welcome';
 import {loadStories as loadGestureResponderStories} from './GestureResponder';
+import {loadStories as loadGestureHandlerStories} from "./GestureHandlers";
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')}/>);
 
@@ -26,3 +27,4 @@ storiesOf('Button', module)
     ));
 
 loadGestureResponderStories();
+loadGestureHandlerStories();
