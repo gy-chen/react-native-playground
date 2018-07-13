@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import {storiesOf} from '@storybook/react-native';
 import {action} from '@storybook/addon-actions';
 import {PinchGestureHandler} from 'react-native-gesture-handler';
+import PinchDemo from './components/PinchDemo';
 
 const PinchGestureHandlerView = styled.View`
     flex: 1;
@@ -18,9 +19,10 @@ export const loadStories = () => {
                 <PinchGestureHandler
                     onGestureEvent={action('onGestureEvent')}
                     onHandlerStateChange={action('onHandlerStateChange')}
-                    >
+                >
                     <PinchGestureHandlerView/>
                 </PinchGestureHandler>
             )
-        });
+        })
+        .add('pinch demo', () => (<PinchDemo/>));
 };
